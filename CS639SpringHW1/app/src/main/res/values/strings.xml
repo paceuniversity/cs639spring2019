@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CS639SpringHW1</string>
+
+    <string name="bird_description">This is a bird. It can usually be found flying or looking for worms in the first</string>
+    <string name="cat_description">This is a cat. They are big fans of milk and yarn. They do not like water and also don\'t like when you touch their tails.</string>
+    <string name="dog_description">This is a dog. Sometimes referred to as a human\'s best friend. They like playing with bones and frisbees.</string>
+    <string name="please_select_an_animal_image_before_choosing_an_image_modification">Please select an animal image before choosing an image modification</string>
+
+    <string name="rotate">Rotate</string>
+    <string name="scale_up">Scale Up</string>
+    <string name="scale_down">Scale Down</string>
+    <string name="flip">Flip</string>
+    <string name="up">Up</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="down">Down</string>
+</resources>
