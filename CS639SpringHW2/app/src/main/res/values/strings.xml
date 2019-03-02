@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">CS639SpringHW2</string>
+
+    <string name="bird_title">Bird</string>
+    <string name="bird_description">This is a bird. It can usually be found flying or looking for worms in the first</string>
+    <string name="cat_title">Cat</string>
+    <string name="cat_description">This is a cat. They are big fans of milk and yarn. They do not like water and also don\'t like when you touch their tails.</string>
+    <string name="dog_title">Dog</string>
+    <string name="dog_description">This is a dog. Sometimes referred to as a human\'s best friend. They like playing with bones and frisbees.</string>
+
+    <string name="fish_title">Fish</string>
+    <string name="fish_description">This is a fish. They are really fast swimmers and hate being out of water.</string>
+    <string name="lizard_title">Lizard</string>
+    <string name="lizard_description">This is a lizard. They\'re cold-blooded so don\'t get on their bad side.</string>
+    <string name="rabbit_title">Rabbit</string>
+    <string name="rabbit_description">This is a rabbit. Their name rhymes with their favorite food.</string>
+    <string name="rat_title">Rat</string>
+    <string name="rat_description">This is a rat. The official animal of New York City</string>
+    <string name="snake_title">Snake</string>
+    <string name="snake_description">This is a snake. You might see it if you look in the mirror.</string>
+    <string name="squirrel_title">Squirrel</string>
+    <string name="squirrel_description">This is a squirrel. Which is Latin for "Rat with a Good PR Team"</string>
+    <string name="turtle_title">Turtle</string>
+    <string name="turtle_description">This is a turtle. It would\'ve appeared at the top of the list, but it didn\'t get there fast enough</string>
+
+    <string name="name_return_description">%1$s\n%2$s</string>
+
+    <string name="please_select_an_animal_image_before_choosing_an_image_modification">Please select an animal image before choosing an image modification</string>
+    <string name="please_select_an_animal_image_before_adding_fun_fact">Please select an animal image before adding a fun fact</string>
+    <string name="fun_fact_text_cannot_be_blank">Please add fun fact text before adding it to the list</string>
+    <string name="could_not_remove_fun_fact_at_least_one_needed">Fun fact could not be removed. At least one fun fact is needed for this animal.</string>
+
+    <string name="add_fact">Add Fact</string>
+    <string name="next_fact">Next Fact</string>
+    <string name="delete_fact">Delete Fact</string>
+
+
+    <string name="rotate">Rotate</string>
+    <string name="scale_up">Scale Up</string>
+    <string name="scale_down">Scale Down</string>
+    <string name="flip">Flip</string>
+    <string name="up">Up</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="down">Down</string>
+</resources>

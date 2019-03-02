@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fun_fact_edit_text"
+        android:layout_marginBottom="10dp"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+    <EditText
+        android:id="@+id/fun_fact_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/image_modifier"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toStartOf="@+id/bttn_add"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/bttn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fun_fact_edit_text"
+        android:layout_alignParentTop="@+id/fun_fact_edit_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="@+id/fun_fact_edit_text"
+        android:layout_marginEnd="5dp"
+        android:text="@string/add_fact" />
+
+
+    <RelativeLayout
+        android:id="@+id/image_modifier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="3dp"
+            android:text="@string/rotate" />
+
+        <Button
+            android:id="@+id/flip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/rotate"
+            android:text="@string/flip" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/left"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:text="@string/left" />
+
+            <ImageView
+                android:id="@+id/up"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_above="@id/left"
+                android:layout_marginEnd="3dp"
+                android:layout_toEndOf="@id/left"
+                android:src="@drawable/ic_arrow_upward_black_24dp"
+                android:text="@string/up" />
+
+            <ImageView
+                android:id="@+id/down"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/left"
+                android:layout_toEndOf="@id/left"
+                android:src="@drawable/ic_arrow_downward_black_24dp"
+                android:text="@string/down" />
+
+            <ImageView
+                android:id="@+id/right"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/up"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                android:text="@string/right" />
+
+            <ImageView
+                android:id="@+id/center"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_filter_center_focus_black_24dp"
+                android:text="@string/right" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
