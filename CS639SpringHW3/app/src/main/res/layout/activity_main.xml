@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pace.cs639spring.hw3.MainActivity">
+
+    <com.pace.cs639spring.hw3.SophisticatedLineGraphView
+        android:id="@+id/line_graph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        app:pointColor="#6C7B8B"
+        app:maxColor="#27408B" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/date"
+        android:layout_alignEnd="@+id/students_text"
+        android:layout_alignTop="@+id/date"
+        android:layout_below="@id/line_graph"
+        android:gravity="center"
+        android:text="@string/date" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_graph"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/date_text" />
+
+
+    <TextView
+        android:id="@+id/students_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/count"
+        android:layout_alignTop="@+id/count"
+        android:layout_below="@id/date"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/student_count" />
+
+    <EditText
+        android:id="@+id/count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/students_text"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/count"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onAddDataClicked"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/add_data" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClearDataClicked"
+            android:padding="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/clear_data" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/show_lines_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_alignBottom="@+id/show_lines_checkbox"
+        android:layout_alignTop="@+id/show_lines_checkbox"
+        android:layout_below="@id/button_container"
+        android:gravity="center"
+        android:text="@string/show_lines" />
+
+    <CheckBox
+        android:id="@+id/show_lines_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_container"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/show_lines_text"
+        android:checked="true"
+        android:onClick="onShowLinesClicked"/>
+
+    <TextView
+        android:id="@+id/highlight_integral_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_alignBottom="@+id/highlight_integral_checkbox"
+        android:layout_alignTop="@+id/highlight_integral_checkbox"
+        android:gravity="center"
+        android:text="@string/highlight_integral" />
+
+    <CheckBox
+        android:id="@+id/highlight_integral_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_lines_checkbox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:checked="true"
+        android:layout_toEndOf="@+id/highlight_integral_text"
+        android:onClick="onHighlightIntegralClicked"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/highlight_integral_checkbox"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:gravity="center"
+            android:text="@string/five" />
+
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="@string/ten" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Homework">
+        <attr name="pointColor" format="color"/>
+        <attr name="maxColor" format="color"/>
+        <attr name="lineColor" format="color"/>
+        <attr name="pathBorderColor" format="color"/>
+        <attr name="graphAreaColor" format="color"/>
+    </declare-styleable>
+</resources>
