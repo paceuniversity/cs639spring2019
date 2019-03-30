@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CS639SpringHW4</string>
+    <string name="example_title_colon">Example:</string>
+    <string name="create_your_own">Create Your Own</string>
+
+    <string name="radius_title_colon">Radius:</string>
+    <string name="speed_title_colon">Speed:</string>
+    <string name="color_title_colon">Color:</string>
+    <string name="add_title">Add</string>
+    <string name="speed_cannot_be_empty">Speed cannot be empty</string>
+    <string name="radius_cannot_be_empty">Radius cannot be empty</string>
+    <string name="please_select_a_color">Please select a color</string>
+    <string name="please_enter_valid_radius">Please enter in a valid radius value. Must be a number greater than zero</string>
+    <string name="please_enter_valid_speed">Please enter in a valid speed value. Must be a number greater than zero</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="speed_cannot_be_less_than_one">Speed cannot be less than 1</string>
+</resources>

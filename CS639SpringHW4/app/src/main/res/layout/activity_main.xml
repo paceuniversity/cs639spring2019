@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.pace.cs639spring.hw4.MainActivity">
+
+    <TextView
+        android:id="@+id/example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/example_title_colon"/>
+
+    <com.pace.cs639spring.hw4.CircleAnimationView
+        android:id="@+id/example_circle_animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="10dp"
+        app:circleRadius="20"
+        app:circleColor="#3399ff"/>
+
+
+    <TextView
+        android:id="@+id/create_your_own"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/create_your_own"/>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:id="@+id/update_speed_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:text="@string/speed_title_colon" />
+
+
+            <Button
+                android:layout_toStartOf="@+id/speed_value"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:textSize="22dp"
+                android:text="@string/minus"
+                android:onClick="onMinusClicked"/>
+
+            <TextView
+                android:id="@+id/speed_value"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="0" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/speed_value"
+                android:textSize="22dp"
+                android:onClick="onPlusClicked"
+                android:text="@string/plus"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/create_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/radius_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/radius"
+                android:layout_alignTop="@+id/radius"
+                android:gravity="center"
+                android:text="@string/radius_title_colon" />
+
+            <EditText
+                android:id="@+id/radius"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/radius_text"
+                android:inputType="number" />
+
+
+            <TextView
+                android:id="@+id/speed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/speed"
+                android:layout_alignTop="@+id/speed"
+                android:layout_marginBottom="10dp"
+                android:layout_toStartOf="@+id/speed"
+                android:gravity="center"
+                android:text="@string/speed_title_colon" />
+
+            <EditText
+                android:id="@+id/speed"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/color_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_alignTop="@+id/colors"
+                android:layout_alignBottom="@+id/colors"
+                android:text="@string/color_title_colon" />
+
+            <LinearLayout
+                android:id="@+id/colors"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/radius"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_toEndOf="@+id/color_text"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:id="@+id/red"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="#f00"
+                    android:background="@drawable/color_background"
+                    android:layout_marginEnd="3dp"
+                    android:onClick="onColorClicked"/>
+                <ImageView
+                    android:id="@+id/orange"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="#FF7F24"
+                    android:background="@drawable/color_background"
+                    android:layout_marginEnd="3dp"
+                    android:onClick="onColorClicked"/>
+                <ImageView
+                    android:id="@+id/green"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="#0f0"
+                    android:background="@drawable/color_background"
+                    android:layout_marginEnd="3dp"
+                    android:onClick="onColorClicked"/>
+                <ImageView
+                    android:id="@+id/blue"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="#00f"
+                    android:background="@drawable/color_background"
+                    android:layout_marginEnd="3dp"
+                    android:onClick="onColorClicked"/>
+                <ImageView
+                    android:id="@+id/yellow"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="#ff0"
+                    android:background="@drawable/color_background"
+                    android:layout_marginEnd="3dp"
+                    android:onClick="onColorClicked"/>
+            </LinearLayout>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/colors"
+                android:onClick="onAddDataClicked"
+                android:textSize="14dp"
+                android:layout_alignParentEnd="true"
+                android:text="@string/add_title" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
