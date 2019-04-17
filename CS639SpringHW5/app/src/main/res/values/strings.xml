@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CS639SpringHW5</string>
+
+
+    <string name="name_colon">Name:</string>
+    <string name="biography_colon">Biography:</string>
+    <string name="add_tab">Add Tab</string>
+    <string name="clear_all">Clear All</string>
+    <string name="create_tabs">Create Tabs</string>
+    <string name="you_must_create_at_least_one_tab">You must create at least one tab</string>
+    <string name="you_cannot_create_more_than_four_tabs">You cannot create more than 4 tabs</string>
+    <string name="name_field_cannot_be_empty">Name field cannot be empty.</string>
+    <string name="biography_field_cannot_be_empty">Biography field cannot be empty</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="please_enter_the_total_amount_of_students_present">Please enter the total amount of students present</string>
+    <string name="please_enter_in_valid_date">Please enter in a valid date. Must follow the format MM/dd/yyyy</string>
+    <string name="please_enter_in_a_valid_number_of_students">Please enter in a valid number of students</string>
+
+    <string name="include_image_question">Include Image?</string>
+
+
+</resources>

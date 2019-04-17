@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateTabsActivity">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/name_text" />
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignEnd="@+id/bio_text"
+        android:layout_alignTop="@+id/name"
+        android:gravity="center"
+        android:text="@string/name_colon" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bio_input"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/name_text"
+        android:inputType="text|textCapWords" />
+
+
+    <TextView
+        android:id="@+id/bio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bio_input"
+        android:layout_alignTop="@+id/bio"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/biography_colon" />
+
+    <EditText
+        android:id="@+id/bio_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/images"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toEndOf="@+id/bio_text"
+        android:inputType="text|textCapSentences" />
+
+    <LinearLayout
+        android:id="@+id/images"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@id/button_container"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/bird"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bird"
+            android:layout_marginEnd="3dp"
+            android:onClick="onImageClicked"/>
+        <ImageView
+            android:id="@+id/cat"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/cat"
+            android:layout_marginEnd="3dp"
+            android:onClick="onImageClicked"/>
+        <ImageView
+            android:id="@+id/dog"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/dog"
+            android:layout_marginEnd="3dp"
+            android:onClick="onImageClicked"/>
+        <ImageView
+            android:id="@+id/fish"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/fish"
+            android:layout_marginEnd="3dp"
+            android:onClick="onImageClicked"/>
+        <ImageView
+            android:id="@+id/turtle"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/turtle"
+            android:layout_marginEnd="3dp"
+            android:onClick="onImageClicked"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:onClick="onAddDataClicked"
+            android:padding="5dp"
+            android:text="@string/add_tab" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClearClicked"
+            android:padding="5dp"
+            android:text="@string/clear_all" />
+
+        <Button
+            android:id="@+id/create_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onCreateTabClicked"
+            android:padding="5dp"
+            android:text="@string/create_tabs" />
+    </LinearLayout>
+
+
+</RelativeLayout>
