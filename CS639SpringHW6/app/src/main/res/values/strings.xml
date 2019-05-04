@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CS639SpringHW6</string>
+    <string name="degree_comma_description">%1$s&#176;, %2$s</string>
+    <string name="no_place_selected">No Place Selected</string>
+    <string name="date_colon">Date:</string>
+    <string name="search">Search</string>
+    <string name="date_format">mm/dd/yyyy</string>
+    <string name="please_select_place_name">Please select a place before searching for the weather</string>
+    <string name="please_enter_a_valid_date">Please enter a valid date before searching for the weather</string>
+    <string name="please_enter_a_date_seven_days_in_future">Please enter today\'s date or a date at most 7 days in the future</string>
+</resources>
