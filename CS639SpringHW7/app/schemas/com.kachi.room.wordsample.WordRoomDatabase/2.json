@@ -1,0 +1,45 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "e7ffd3a8e6446ea45a0f4db17fe19d24",
+    "entities": [
+      {
+        "tableName": "word_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`word` TEXT NOT NULL, `definition` TEXT NOT NULL, `part_of_speech` INTEGER NOT NULL, PRIMARY KEY(`word`))",
+        "fields": [
+          {
+            "fieldPath": "mWord",
+            "columnName": "word",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mDefinition",
+            "columnName": "definition",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mSpeechPart",
+            "columnName": "part_of_speech",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "word"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"e7ffd3a8e6446ea45a0f4db17fe19d24\")"
+    ]
+  }
+}
