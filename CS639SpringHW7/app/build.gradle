@@ -1,11 +1,5 @@
 apply plugin: 'com.android.application'
 
-
-https://developer.android.com/training/location/retrieve-current
-
-
-
-
 android {
     compileSdkVersion 28
     defaultConfig {
